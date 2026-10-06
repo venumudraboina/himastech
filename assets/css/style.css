@@ -378,14 +378,14 @@ img {
   height: var(--header-height);
   z-index: 1000;
   transition: var(--transition-normal);
-  background: rgba(7, 9, 14, 0.8);
+  background: rgba(7, 9, 14, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-subtle);
 }
 
 .site-header.scrolled {
-  background: rgba(7, 9, 14, 0.95);
+  background: rgba(7, 9, 14, 0.96);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid rgba(245, 166, 35, 0.2);
 }
@@ -395,19 +395,25 @@ img {
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  max-width: 1400px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  gap: 16px;
 }
 
 .brand-logo {
   display: flex;
   flex-direction: column;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo-main {
   font-family: var(--font-heading);
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   font-weight: 900;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   background: linear-gradient(135deg, #ffffff 30%, #fed899 70%, #f5a623 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -415,27 +421,33 @@ img {
 }
 
 .logo-sub {
-  font-size: 0.65rem;
+  font-size: 0.58rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   color: var(--cyan-400);
   text-transform: uppercase;
   margin-top: 2px;
+  white-space: nowrap;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: clamp(10px, 1.1vw, 20px);
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
 }
 
 .nav-link {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   font-weight: 500;
   color: var(--text-light);
   position: relative;
   padding: 6px 0;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
 }
 
 .nav-link:hover, .nav-link.active {
@@ -461,7 +473,12 @@ img {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.header-actions .btn {
+  white-space: nowrap;
 }
 
 .mobile-toggle {
@@ -570,6 +587,7 @@ img {
   border: 2px solid var(--bg-primary);
   margin-left: -10px;
   object-fit: cover;
+  object-position: center 15%;
   background: #25334d;
 }
 
@@ -1148,6 +1166,7 @@ img {
   border: 2px solid var(--gold-400);
   margin: 0 auto 10px auto;
   object-fit: cover;
+  object-position: center 15%;
 }
 
 .vcard-sim-name {
@@ -1639,7 +1658,13 @@ img {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: center 15%;
   display: block;
+  transition: transform var(--transition-base);
+}
+
+.about-photo-card:hover img {
+  transform: scale(1.03);
 }
 
 .about-floating-badge {
@@ -2064,6 +2089,36 @@ img {
   display: inline-block;
 }
 
+.footer-social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-400);
+  font-size: 1.15rem;
+  transition: var(--transition-fast);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.footer-social-link:hover {
+  background: rgba(245, 166, 35, 0.2);
+  color: #fff;
+  border-color: var(--gold-400);
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 15px rgba(245, 166, 35, 0.3);
+}
+
+.footer-social-link.insta:hover {
+  background: linear-gradient(135deg, #e1306c, #833ab4);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 6px 15px rgba(225, 48, 108, 0.4);
+}
+
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -2248,19 +2303,7 @@ img {
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
-@media (max-width: 1024px) {
-  .hero-grid,
-  .realty-layout,
-  .ai-demo-grid,
-  .vcard-showcase-grid,
-  .calculator-grid,
-  .about-grid,
-  .contact-layout,
-  .funnel-detail-card {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
+@media (max-width: 1180px) {
   .nav-menu {
     position: fixed;
     top: var(--header-height);
@@ -2284,6 +2327,20 @@ img {
 
   .mobile-toggle {
     display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid,
+  .realty-layout,
+  .ai-demo-grid,
+  .vcard-showcase-grid,
+  .calculator-grid,
+  .about-grid,
+  .contact-layout,
+  .funnel-detail-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .hud-metrics-row {

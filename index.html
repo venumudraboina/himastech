@@ -17,6 +17,38 @@
   <meta property="og:url" content="https://himastech.com/">
   <meta property="og:image" content="assets/images/hero_villa.jpg">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2307090e'/><text x='50%' y='55%' text-anchor='middle' dominant-baseline='central' font-family='sans-serif' font-weight='900' font-size='50' fill='%23f5a623'>H</text></svg>">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "HIMASTECH — Digital Realty Marketing",
+    "image": "https://himastech.com/assets/images/hero_villa.jpg",
+    "description": "Hyderabad's premier Digital Realty Marketing and AI Growth Agency led by Kishore Patel.",
+    "telephone": "+919700053371",
+    "email": "info@himastechdigi.com",
+    "url": "https://himastech.com/",
+    "sameAs": [
+      "https://www.instagram.com/himastech_digitalmarketing"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "addressCountry": "IN"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Kishore Patel",
+      "jobTitle": "Founder & Principal Growth Strategist"
+    },
+    "priceRange": "₹₹₹"
+  }
+  </script>
+
   <!-- Google Fonts: Outfit & Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,21 +79,20 @@
       <nav>
         <ul class="nav-menu" id="navMenu">
           <li><a href="#home" class="nav-link active" id="navHome">Home</a></li>
-          <li><a href="#real-estate-marketing" class="nav-link" id="navRealty">Real Estate Hub</a></li>
+          <li><a href="#real-estate-marketing" class="nav-link" id="navRealty">Real Estate</a></li>
           <li><a href="#ai-marketing" class="nav-link" id="navAi">AI Engine</a></li>
           <li><a href="#digital-vcard" class="nav-link" id="navVcard">Digital V-Card</a></li>
-          <li><a href="#growth-engine" class="nav-link" id="navSystem">Growth System</a></li>
           <li><a href="#digital-marketing" class="nav-link" id="navServices">Services</a></li>
           <li><a href="#portfolio" class="nav-link" id="navPortfolio">Portfolio</a></li>
-          <li><a href="#about-kishore" class="nav-link" id="navAbout">Kishore Patel</a></li>
+          <li><a href="#about-kishore" class="nav-link" id="navAbout">About</a></li>
           <li><a href="#sales-training" class="nav-link" id="navTraining">Training</a></li>
-          <li><a href="#calculator" class="nav-link" id="navCalc">ROI Calculator</a></li>
+          <li><a href="#calculator" class="nav-link" id="navCalc">ROI Calc</a></li>
           <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a href="https://wa.me/919121200000?text=Hi%20Himastech,%20I%20would%20like%20to%20consult%20for%20my%20real%20estate%20project" target="_blank" class="btn btn-whatsapp btn-sm" id="headerWhatsappBtn">
+        <a href="https://wa.me/919700053371?text=Hi%20Himastech,%20I%20would%20like%20to%20consult%20for%20my%20real%20estate%20project" target="_blank" class="btn btn-whatsapp btn-sm" id="headerWhatsappBtn">
           <i class="ri-whatsapp-line"></i> <span>WhatsApp Us</span>
         </a>
         <button class="btn btn-gold btn-sm trigger-consultation-modal" id="headerConsultBtn">
@@ -101,7 +132,7 @@
             <button class="btn btn-gold btn-lg trigger-consultation-modal" id="heroPrimaryCta">
               <i class="ri-rocket-2-fill"></i> GET FREE MARKETING CONSULTATION
             </button>
-            <a href="https://wa.me/919121200000?text=Hi%20Himastech,%20I%20am%20interested%20in%20scaling%20my%20real%20estate%20project%20leads." target="_blank" class="btn btn-whatsapp btn-lg" id="heroSecondaryCta">
+            <a href="https://wa.me/919700053371?text=Hi%20Himastech,%20I%20am%20interested%20in%20scaling%20my%20real%20estate%20project%20leads." target="_blank" class="btn btn-whatsapp btn-lg" id="heroSecondaryCta">
               <i class="ri-whatsapp-fill"></i> WHATSAPP US
             </a>
           </div>
@@ -470,10 +501,13 @@
 
               <div class="vcard-sim-actions">
                 <button class="sim-btn sim-btn-call" id="simCallBtn">
-                  <i class="ri-phone-fill"></i> Tap to Call (+91 91212 00000)
+                  <i class="ri-phone-fill"></i> Tap to Call (+91 97000 53371)
                 </button>
                 <button class="sim-btn sim-btn-wa" id="simWaBtn">
                   <i class="ri-whatsapp-fill"></i> WhatsApp Instant Chat
+                </button>
+                <button class="sim-btn" style="background: linear-gradient(135deg, rgba(225, 48, 108, 0.2), rgba(131, 58, 180, 0.2)); color: #f43f5e; border: 1px solid rgba(225, 48, 108, 0.4);" id="simInstaBtn">
+                  <i class="ri-instagram-fill"></i> Instagram (@himastech)
                 </button>
                 <button class="sim-btn" style="background: #1e293b; color: #38bdf8;" id="simBrochureBtn">
                   <i class="ri-download-2-fill"></i> Download Project Brochure
@@ -1109,7 +1143,7 @@
             <button class="btn btn-gold trigger-consultation-modal">
               <i class="ri-user-voice-fill"></i> Book 1-on-1 Consultation with Kishore
             </button>
-            <a href="https://wa.me/919121200000?text=Hi%20Kishore%20Patel,%20I%20would%20like%20to%20discuss%20a%20marketing%20strategy%20for%20my%20business" target="_blank" class="btn btn-whatsapp">
+            <a href="https://wa.me/919700053371?text=Hi%20Kishore%20Patel,%20I%20would%20like%20to%20discuss%20a%20marketing%20strategy%20for%20my%20business" target="_blank" class="btn btn-whatsapp">
               <i class="ri-whatsapp-fill"></i> Chat on WhatsApp
             </a>
           </div>
@@ -1363,7 +1397,7 @@
             </p>
           </div>
           <div class="testimonial-author">
-            <img src="assets/images/kishore_patel.jpg" alt="Rajesh Reddy" class="author-avatar">
+            <div class="author-avatar" style="background: #1e293b; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #f5a623;">RR</div>
             <div class="author-info">
               <h4>Rajesh Reddy</h4>
               <p>Managing Director, Apex Luxury Spaces</p>
@@ -1429,7 +1463,7 @@
               <div class="contact-method-icon"><i class="ri-phone-fill"></i></div>
               <div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Call Directly</div>
-                <div style="font-size: 1.05rem; font-weight: 700; color: #fff;">+91 91212 00000 / +91 98490 00000</div>
+                <div style="font-size: 1.05rem; font-weight: 700; color: #fff;">+91 97000 53371</div>
               </div>
             </div>
 
@@ -1439,7 +1473,17 @@
               </div>
               <div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">WhatsApp Direct</div>
-                <a href="https://wa.me/919121200000" target="_blank" style="font-size: 1.05rem; font-weight: 700; color: #25d366;">Chat on WhatsApp (Instant Reply)</a>
+                <a href="https://wa.me/919700053371" target="_blank" style="font-size: 1.05rem; font-weight: 700; color: #25d366;">Chat on WhatsApp (+91 97000 53371)</a>
+              </div>
+            </div>
+
+            <div class="contact-method-item">
+              <div class="contact-method-icon" style="background: rgba(225, 48, 108, 0.15); color: #e1306c;">
+                <i class="ri-instagram-fill"></i>
+              </div>
+              <div>
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Official Instagram</div>
+                <a href="https://www.instagram.com/himastech_digitalmarketing?stkn=MXdxa2M5OTI2M3F5Yg==" target="_blank" rel="noopener noreferrer" style="font-size: 1.05rem; font-weight: 700; color: #f43f5e;">@himastech_digitalmarketing</a>
               </div>
             </div>
 
@@ -1447,7 +1491,7 @@
               <div class="contact-method-icon"><i class="ri-mail-fill"></i></div>
               <div>
                 <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Official Email</div>
-                <div style="font-size: 1.05rem; font-weight: 700; color: #fff;">contact@himastech.com | kishore@himastech.com</div>
+                <div style="font-size: 1.05rem; font-weight: 700; color: #fff;">info@himastechdigi.com</div>
               </div>
             </div>
 
@@ -1533,10 +1577,10 @@
             We Make Real Estate Projects Visible. We Turn Attention Into Leads. Hyderabad's premier digital realty marketing and AI sales growth agency.
           </p>
           <div style="display: flex; gap: 12px;">
-            <a href="#" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: var(--gold-400); font-size: 1.1rem;"><i class="ri-instagram-fill"></i></a>
-            <a href="#" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: var(--gold-400); font-size: 1.1rem;"><i class="ri-facebook-fill"></i></a>
-            <a href="#" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: var(--gold-400); font-size: 1.1rem;"><i class="ri-linkedin-fill"></i></a>
-            <a href="#" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; color: var(--gold-400); font-size: 1.1rem;"><i class="ri-youtube-fill"></i></a>
+            <a href="https://www.instagram.com/himastech_digitalmarketing?stkn=MXdxa2M5OTI2M3F5Yg==" target="_blank" rel="noopener noreferrer" aria-label="HIMASTECH Instagram" class="footer-social-link insta"><i class="ri-instagram-fill"></i></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer-social-link"><i class="ri-facebook-fill"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-link"><i class="ri-linkedin-fill"></i></a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link"><i class="ri-youtube-fill"></i></a>
           </div>
         </div>
 
@@ -1574,10 +1618,10 @@
             <i class="ri-map-pin-line" style="color: var(--gold-400);"></i> Jubilee Hills / Financial District, Hyderabad, Telangana, India
           </p>
           <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 12px;">
-            <i class="ri-phone-line" style="color: var(--gold-400);"></i> +91 91212 00000
+            <i class="ri-phone-line" style="color: var(--gold-400);"></i> +91 97000 53371
           </p>
           <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 20px;">
-            <i class="ri-mail-line" style="color: var(--gold-400);"></i> contact@himastech.com
+            <i class="ri-mail-line" style="color: var(--gold-400);"></i> info@himastechdigi.com
           </p>
           <button class="btn btn-gold btn-sm trigger-consultation-modal" style="width: 100%;">
             Get Free Marketing Plan
@@ -1603,7 +1647,7 @@
        ========================================================================== -->
   <!-- Floating WhatsApp Quick Action Button -->
   <div class="floating-whatsapp-widget">
-    <a href="https://wa.me/919121200000?text=Hi%20Himastech,%20I%20would%20like%20to%20consult%20for%20my%20real%20estate%20project" target="_blank" class="whatsapp-bubble-btn" aria-label="Chat on WhatsApp" id="floatingWhatsappBubble">
+    <a href="https://wa.me/919700053371?text=Hi%20Himastech,%20I%20would%20like%20to%20consult%20for%20my%20real%20estate%20project" target="_blank" class="whatsapp-bubble-btn" aria-label="Chat on WhatsApp" id="floatingWhatsappBubble">
       <span class="whatsapp-pulse-ring"></span>
       <i class="ri-whatsapp-fill"></i>
     </a>
@@ -1612,10 +1656,10 @@
   <!-- Fixed Mobile Bottom Conversion Bar -->
   <div class="mobile-bottom-bar">
     <div class="mobile-bar-actions">
-      <a href="tel:+919121200000" class="mobile-bar-btn" style="background: rgba(255, 255, 255, 0.08); color: #fff;">
+      <a href="tel:+919700053371" class="mobile-bar-btn" style="background: rgba(255, 255, 255, 0.08); color: #fff;">
         <i class="ri-phone-fill"></i> CALL
       </a>
-      <a href="https://wa.me/919121200000?text=Hi%20Himastech,%20I%20am%20interested%20in%20real%20estate%20digital%20marketing%20services" target="_blank" class="mobile-bar-btn" style="background: #25d366; color: #fff;">
+      <a href="https://wa.me/919700053371?text=Hi%20Himastech,%20I%20am%20interested%20in%20real%20estate%20digital%20marketing%20services" target="_blank" class="mobile-bar-btn" style="background: #25d366; color: #fff;">
         <i class="ri-whatsapp-fill"></i> WHATSAPP
       </a>
       <button class="mobile-bar-btn btn-gold trigger-consultation-modal">

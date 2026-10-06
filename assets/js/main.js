@@ -291,14 +291,23 @@ function initPhoneSimulator() {
 
   if (simCallBtn) {
     simCallBtn.addEventListener('click', () => {
-      showToast('📞 Initiating Call: +91 91212 00000 (Himastech Direct)');
+      showToast('📞 Initiating Call: +91 97000 53371 (Himastech Direct)');
     });
   }
 
   if (simWaBtn) {
     simWaBtn.addEventListener('click', () => {
       showToast('💬 Opening Verified WhatsApp Business Chat with Instant Greeting...');
-      window.open('https://wa.me/919121200000?text=Hi%20Himastech,%20I%20am%20interested%20in%20Digital%20Visiting%20Card%20and%20Real%20Estate%20Marketing%20Solutions', '_blank');
+      window.open('https://wa.me/919700053371?text=Hi%20Himastech,%20I%20am%20interested%20in%20Digital%20Visiting%20Card%20and%20Real%20Estate%20Marketing%20Solutions', '_blank');
+    });
+  }
+
+  const simInstaBtn = document.getElementById('simInstaBtn');
+
+  if (simInstaBtn) {
+    simInstaBtn.addEventListener('click', () => {
+      showToast('📸 Opening Official Instagram Profile @himastech_digitalmarketing...');
+      window.open('https://www.instagram.com/himastech_digitalmarketing?stkn=MXdxa2M5OTI2M3F5Yg==', '_blank');
     });
   }
 
@@ -555,7 +564,7 @@ function initForms() {
       setTimeout(() => {
         const confirmWa = confirm(`Would you like to open WhatsApp directly to chat with Kishore Patel right now?`);
         if (confirmWa) {
-          window.open(`https://wa.me/919121200000?text=${text}`, '_blank');
+          window.open(`https://wa.me/919700053371?text=${text}`, '_blank');
         }
       }, 800);
     }, 1200);
