@@ -301,7 +301,8 @@ img {
   border: none;
   letter-spacing: 0.02em;
   text-align: center;
-  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .btn-gold {
@@ -528,6 +529,8 @@ img {
   font-size: 0.825rem;
   font-weight: 600;
   margin-bottom: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .pulse-dot {
@@ -2353,9 +2356,94 @@ img {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .site-header {
+    height: 68px;
+  }
+
+  .header-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .brand-logo .logo-main {
+    font-size: 1.25rem;
+  }
+
+  .brand-logo .logo-sub {
+    font-size: 0.52rem;
+  }
+
+  .header-actions #headerWhatsappBtn,
+  .header-actions #headerConsultBtn {
+    display: none !important;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.7rem;
+    padding: 6px;
+  }
+
   .hero-section {
-    padding-top: calc(var(--header-height) + 20px);
-    padding-bottom: 60px;
+    padding-top: calc(var(--header-height) + 16px);
+    padding-bottom: 50px;
+    min-height: auto;
+  }
+
+  .hero-announcement {
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    line-height: 1.4;
+    max-width: 100%;
+    border-radius: 12px;
+    white-space: normal;
+  }
+
+  .hero-headline {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+    line-height: 1.18;
+    margin-bottom: 16px;
+    word-break: break-word;
+  }
+
+  .hero-subheading {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    line-height: 1.55;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 28px;
+  }
+
+  .hero-cta-group .btn,
+  .hero-cta-group a.btn {
+    width: 100%;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+    font-size: 0.92rem;
+    padding: 14px 18px;
+  }
+
+  .hero-trust-micro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
   }
 
   .hud-top-right, .hud-bottom-left {
@@ -2380,7 +2468,7 @@ img {
 
   .floating-whatsapp-widget {
     bottom: 80px;
-    right: 20px;
+    right: 16px;
   }
 
   body {
@@ -2391,5 +2479,23 @@ img {
     flex-direction: column;
     gap: 14px;
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-logo .logo-main {
+    font-size: 1.15rem;
+  }
+
+  .brand-logo .logo-sub {
+    font-size: 0.48rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
   }
 }
