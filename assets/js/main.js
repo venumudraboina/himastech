@@ -519,34 +519,17 @@ function initModals() {
    9. Live Marketing Dashboard Pulse
    ========================================================================== */
 function initLiveDashboard() {
-  const liveLeadCount = document.getElementById('liveLeadsCount');
+  const dashboardLiveLeads = document.getElementById('dashboardLiveLeads');
   const liveCampaignCount = document.getElementById('liveCampaignsCount');
-  const liveTickerElement = document.getElementById('liveActivityTicker');
 
-  const liveEvents = [
-    "🔥 New ₹5.2Cr Villa Inquiry generated for Kokapet Project",
-    "📈 CPL reduced to ₹290 on Meta NRI Campaign (USA/Dallas)",
-    "⚡ 12 Qualified Site Visits booked today via WhatsApp Bot",
-    "✨ AI Campaign Generator launched 6 fresh video ad variants",
-    "🏢 Commercial Suite lease inquiry received from IT MNC (45,000 sq.ft)",
-    "🎉 Gated Community Phase 2: 85% inventory sold out!"
-  ];
-
+  // Increment monthly verified leads in the Live Marketing Dashboard telemetry
   let counter = 4892;
   setInterval(() => {
     counter += Math.floor(Math.random() * 2) + 1;
-    if (liveLeadCount) {
-      liveLeadCount.textContent = counter.toLocaleString('en-IN');
+    if (dashboardLiveLeads) {
+      dashboardLiveLeads.textContent = counter.toLocaleString('en-IN');
     }
   }, 4500);
-
-  let eventIdx = 0;
-  setInterval(() => {
-    if (liveTickerElement) {
-      eventIdx = (eventIdx + 1) % liveEvents.length;
-      liveTickerElement.innerHTML = `<i class="ri-flashlight-fill" style="color: #f5a623;"></i> ${liveEvents[eventIdx]}`;
-    }
-  }, 5000);
 }
 
 /* ==========================================================================

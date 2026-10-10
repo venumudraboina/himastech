@@ -722,13 +722,14 @@ img {
 
 /* Live Activity Ticker */
 .live-ticker-strip {
-  background: rgba(13, 18, 29, 0.6);
+  background: rgba(13, 18, 29, 0.7);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
-  padding: 14px 0;
+  padding: 12px 0;
   overflow: hidden;
   position: relative;
   z-index: 2;
+  user-select: none;
 }
 
 .live-ticker-strip::before,
@@ -737,7 +738,7 @@ img {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 40px;
+  width: 50px;
   z-index: 3;
   pointer-events: none;
 }
@@ -755,9 +756,21 @@ img {
 .ticker-content {
   display: flex;
   align-items: center;
-  gap: 40px;
-  animation: scrollTicker 30s linear infinite;
+  width: max-content;
+  animation: scrollTicker 38s linear infinite;
   white-space: nowrap;
+}
+
+.ticker-content:hover {
+  animation-play-state: paused;
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  padding-right: 36px;
+  flex-shrink: 0;
 }
 
 @keyframes scrollTicker {
@@ -768,14 +781,15 @@ img {
 .ticker-item {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-size: 0.85rem;
   color: var(--text-light);
 }
 
 .ticker-item span.highlight {
   color: var(--gold-300);
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 /* ==========================================================================
@@ -2712,6 +2726,11 @@ select.form-control option {
     object-fit: cover;
   }
 
+  @keyframes floatUpDownMobile {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+
   .floating-hud-badge {
     position: absolute;
     padding: 8px 12px;
@@ -2721,7 +2740,7 @@ select.form-control option {
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    animation: none;
+    animation: floatUpDownMobile 4.5s ease-in-out infinite;
     z-index: 4;
   }
 
@@ -2732,6 +2751,7 @@ select.form-control option {
     bottom: auto;
     margin-top: 0;
     width: auto;
+    animation-delay: 0s;
   }
 
   .hud-bottom-left {
@@ -2741,6 +2761,27 @@ select.form-control option {
     top: auto;
     margin-top: 0;
     width: auto;
+    animation-delay: 2.2s;
+  }
+
+  /* Live Ticker Mobile */
+  .live-ticker-strip {
+    padding: 10px 0;
+  }
+
+  .live-ticker-strip::before,
+  .live-ticker-strip::after {
+    width: 25px;
+  }
+
+  .ticker-track {
+    gap: 22px;
+    padding-right: 22px;
+  }
+
+  .ticker-item {
+    font-size: 0.76rem;
+    gap: 6px;
   }
 
   .hud-icon {
@@ -3335,6 +3376,26 @@ select.form-control option {
 
   .hud-value {
     font-size: 0.8rem;
+  }
+
+  /* Live Ticker Small Mobile */
+  .live-ticker-strip {
+    padding: 8px 0;
+  }
+
+  .live-ticker-strip::before,
+  .live-ticker-strip::after {
+    width: 20px;
+  }
+
+  .ticker-track {
+    gap: 16px;
+    padding-right: 16px;
+  }
+
+  .ticker-item {
+    font-size: 0.72rem;
+    gap: 5px;
   }
 
   .stats-grid {
