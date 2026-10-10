@@ -886,6 +886,10 @@ img {
   opacity: 0.6;
 }
 
+.funnel-swipe-hint {
+  display: none;
+}
+
 .funnel-detail-card {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -898,9 +902,16 @@ img {
   box-shadow: var(--shadow-lg);
 }
 
-.funnel-detail-left h3 {
+.funnel-detail-title {
   font-size: 1.8rem;
   margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.funnel-desc {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
 .funnel-checklist {
@@ -922,6 +933,37 @@ img {
 .funnel-checklist li i {
   color: var(--gold-400);
   margin-top: 3px;
+}
+
+.funnel-attribution-card {
+  background: rgba(7, 9, 14, 0.9);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--border-radius-lg);
+  padding: 30px;
+  text-align: center;
+}
+
+.attribution-icon {
+  font-size: 3.5rem;
+  color: var(--gold-400);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.attribution-heading {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.attribution-desc {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.attribution-action {
+  margin-top: 20px;
 }
 
 /* ==========================================================================
@@ -2485,7 +2527,18 @@ select.form-control option {
   .contact-layout,
   .funnel-detail-card {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+  }
+
+  .funnel-flow-container {
+    justify-content: flex-start;
+    gap: 10px;
+    padding-bottom: 14px;
+    margin-bottom: 32px;
+  }
+
+  .funnel-detail-card {
+    padding: 32px 24px;
   }
 
   .hud-metrics-row {
@@ -2884,6 +2937,226 @@ select.form-control option {
     gap: 14px;
     text-align: center;
   }
+
+  /* Global Mobile Spacing */
+  .section-spacing {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .section-header {
+    margin: 0 auto 28px auto;
+  }
+
+  .section-tag {
+    font-size: 0.74rem;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+  }
+
+  /* 3. The Himastech Difference (Funnel System) Mobile */
+  .funnel-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    color: var(--gold-400);
+    margin-top: -8px;
+    margin-bottom: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .funnel-flow-container {
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 6px 4px 14px 4px;
+    margin-bottom: 22px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scroll-padding: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold-500) rgba(255, 255, 255, 0.05);
+  }
+
+  .funnel-flow-container::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .funnel-flow-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 4px;
+  }
+
+  .funnel-flow-container::-webkit-scrollbar-thumb {
+    background: var(--gold-500);
+    border-radius: 4px;
+  }
+
+  .funnel-step-btn {
+    flex: 0 0 auto;
+    min-width: 124px;
+    padding: 11px 12px;
+    border-radius: 12px;
+    scroll-snap-align: start;
+  }
+
+  .funnel-step-btn .step-number {
+    font-size: 0.65rem;
+    margin-bottom: 2px;
+  }
+
+  .funnel-step-btn .step-title {
+    font-size: 0.88rem;
+  }
+
+  .funnel-step-arrow {
+    flex-shrink: 0;
+    font-size: 0.88rem;
+    opacity: 0.45;
+  }
+
+  .funnel-detail-card {
+    padding: 20px 14px;
+    gap: 20px;
+    border-radius: 18px;
+  }
+
+  .funnel-detail-title {
+    font-size: 1.25rem !important;
+    margin-bottom: 10px !important;
+    line-height: 1.25 !important;
+  }
+
+  .funnel-desc {
+    font-size: 0.88rem !important;
+    margin-bottom: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  .funnel-checklist {
+    margin-top: 14px;
+    gap: 10px;
+  }
+
+  .funnel-checklist li {
+    font-size: 0.84rem;
+    line-height: 1.4;
+    gap: 8px;
+  }
+
+  .funnel-checklist li i {
+    font-size: 1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .funnel-attribution-card {
+    padding: 18px 14px;
+    border-radius: 14px;
+  }
+
+  .attribution-icon {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+  }
+
+  .attribution-heading {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .attribution-desc {
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+
+  .attribution-action {
+    margin-top: 14px;
+  }
+
+  .attribution-action .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* 4. Real Estate Section Mobile Responsiveness */
+  .realty-layout {
+    gap: 28px;
+    margin-bottom: 36px;
+  }
+
+  .pills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+    margin: 18px 0;
+  }
+
+  .pill-card {
+    padding: 10px 8px;
+    font-size: 0.78rem;
+    gap: 6px;
+    border-radius: 10px;
+  }
+
+  .pill-card i {
+    font-size: 0.95rem;
+  }
+
+  .realty-floating-tag {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .realty-capabilities-content h3 {
+    font-size: 1.35rem !important;
+    margin-bottom: 12px !important;
+    line-height: 1.25 !important;
+  }
+
+  /* 5. AI Marketing Suite Mobile Responsiveness */
+  .ai-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .ai-pillar-card {
+    padding: 18px 14px;
+    border-radius: 14px;
+  }
+
+  .ai-pillar-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .ai-pillar-title {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .ai-demo-container {
+    padding: 20px 14px;
+    border-radius: 18px;
+  }
+
+  .ai-output-screen {
+    padding: 16px 12px;
+    min-height: 240px;
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3124,5 +3397,97 @@ select.form-control option {
 
   .section-subtitle {
     font-size: 0.92rem;
+  }
+
+  .section-spacing {
+    padding-top: 38px;
+    padding-bottom: 38px;
+  }
+
+  .section-header {
+    margin: 0 auto 22px auto;
+  }
+
+  .funnel-step-btn {
+    min-width: 108px;
+    padding: 9px 10px;
+    border-radius: 10px;
+  }
+
+  .funnel-step-btn .step-number {
+    font-size: 0.58rem;
+  }
+
+  .funnel-step-btn .step-title {
+    font-size: 0.8rem;
+  }
+
+  .funnel-step-arrow {
+    font-size: 0.76rem;
+    opacity: 0.35;
+  }
+
+  .funnel-detail-card {
+    padding: 16px 12px;
+    gap: 16px;
+    border-radius: 16px;
+  }
+
+  .funnel-detail-title {
+    font-size: 1.15rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  .funnel-desc {
+    font-size: 0.82rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  .funnel-checklist {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .funnel-checklist li {
+    font-size: 0.8rem;
+  }
+
+  .funnel-attribution-card {
+    padding: 14px 10px;
+    border-radius: 12px;
+  }
+
+  .attribution-icon {
+    font-size: 1.9rem;
+    margin-bottom: 6px;
+  }
+
+  .attribution-heading {
+    font-size: 0.98rem;
+  }
+
+  .attribution-desc {
+    font-size: 0.75rem;
+  }
+
+  .pills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px;
+    margin: 14px 0;
+  }
+
+  .pill-card {
+    padding: 8px 6px;
+    font-size: 0.72rem;
+    gap: 5px;
+  }
+
+  .realty-capabilities-content h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .ai-demo-container {
+    padding: 16px 10px;
+    border-radius: 16px;
   }
 }

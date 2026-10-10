@@ -400,13 +400,18 @@ function initFunnelTabs() {
       buttons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
+      // Center the active step on mobile swipeable rail
+      if (typeof btn.scrollIntoView === 'function') {
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+
       const data = funnelData[index];
       const leftCol = card.querySelector('.funnel-detail-left');
       if (leftCol && data) {
         leftCol.innerHTML = `
           <div class="section-tag">${data.step} // ${data.title}</div>
-          <h3 class="text-gold-gradient">${data.heading}</h3>
-          <p class="section-subtitle" style="font-size: 1rem; margin-bottom: 20px;">${data.desc}</p>
+          <h3 class="text-gold-gradient funnel-detail-title">${data.heading}</h3>
+          <p class="section-subtitle funnel-desc">${data.desc}</p>
           <ul class="funnel-checklist">
             ${data.points.map(pt => `<li><i class="ri-checkbox-circle-fill"></i> <span>${pt}</span></li>`).join('')}
           </ul>
