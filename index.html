@@ -949,24 +949,28 @@
 
       <!-- Before / After Draggable Split Slider -->
       <div style="text-align: center; margin-bottom: 20px;">
-        <span style="font-size: 0.95rem; color: var(--text-light); font-weight: 600;">
-          👈 Drag the divider to compare <span style="color: #ef4444;">Standard Flat Poster (Before)</span> vs <span style="color: #10b981;">Himastech AI Luxury Ad (After)</span> 👉
+        <span class="slider-instruction-hint" style="font-size: clamp(0.82rem, 2.5vw, 0.95rem); color: var(--text-light); font-weight: 600;">
+          👈 Drag divider to compare <span style="color: #10b981;">Himastech AI Ad (After)</span> vs <span style="color: #ef4444;">Standard Poster (Before)</span> 👉
         </span>
       </div>
 
       <div class="comparison-slider-container">
         <!-- Before Image (Underneath) -->
         <img src="assets/images/portfolio_before.jpg" alt="Generic Real Estate Ad Before" class="slider-img before">
-        <div class="slider-badge before-badge">BEFORE: LOW CONVERSION POSTER</div>
+        <div class="slider-badge before-badge">
+          <span class="badge-tag">BEFORE</span><span class="badge-sub">: FLAT POSTER</span>
+        </div>
 
         <!-- After Image (Clipped Overlay) -->
         <div class="slider-img-wrapper">
           <img src="assets/images/portfolio_after.jpg" alt="Himastech Luxury Real Estate Ad After" class="slider-img after">
-          <div class="slider-badge after-badge">AFTER: HIMASTECH 14X ROAS CREATIVE</div>
+          <div class="slider-badge after-badge">
+            <span class="badge-tag">AFTER</span><span class="badge-sub">: HIMASTECH AI</span>
+          </div>
         </div>
 
         <!-- Draggable Handle -->
-        <div class="slider-handle">
+        <div class="slider-handle" aria-label="Drag to compare before and after">
           <i class="ri-drag-move-fill"></i>
         </div>
       </div>
