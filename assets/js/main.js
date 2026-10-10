@@ -471,32 +471,46 @@ function initFilterTabs() {
    ========================================================================== */
 function initModals() {
   const modalOverlay = document.getElementById('consultationModal');
+  const modalCard = modalOverlay ? modalOverlay.querySelector('.custom-modal-card') : null;
   const closeBtn = document.getElementById('modalCloseBtn');
   const openButtons = document.querySelectorAll('.trigger-consultation-modal');
+
+  const openModal = () => {
+    if (!modalOverlay) return;
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    if (modalCard) modalCard.scrollTop = 0;
+  };
+
+  const closeModal = () => {
+    if (!modalOverlay) return;
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  };
 
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      if (modalOverlay) modalOverlay.classList.add('active');
+      openModal();
     });
   });
 
-  if (closeBtn && modalOverlay) {
-    closeBtn.addEventListener('click', () => {
-      modalOverlay.classList.remove('active');
-    });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
 
+  if (modalOverlay) {
     modalOverlay.addEventListener('click', (e) => {
       if (e.target === modalOverlay) {
-        modalOverlay.classList.remove('active');
+        closeModal();
       }
     });
   }
 
-  // Keyboard Escape / 'K' shortcut
+  // Keyboard Escape shortcut
   window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modalOverlay) {
-      modalOverlay.classList.remove('active');
+    if (e.key === 'Escape' && modalOverlay && modalOverlay.classList.contains('active')) {
+      closeModal();
     }
   });
 }
