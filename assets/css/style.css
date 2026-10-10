@@ -731,6 +731,27 @@ img {
   z-index: 2;
 }
 
+.live-ticker-strip::before,
+.live-ticker-strip::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.live-ticker-strip::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg-primary) 0%, transparent 100%);
+}
+
+.live-ticker-strip::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg-primary) 0%, transparent 100%);
+}
+
 .ticker-content {
   display: flex;
   align-items: center;
@@ -2567,14 +2588,90 @@ select.form-control option {
     gap: 12px;
   }
 
-  .hud-top-right, .hud-bottom-left {
-    position: static;
-    margin-top: 12px;
+  .hero-visual-wrapper {
+    margin-top: 24px;
+  }
+
+  .hero-main-card {
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-main-img {
+    aspect-ratio: 16 / 10;
     width: 100%;
+    object-fit: cover;
   }
 
   .floating-hud-badge {
+    position: absolute;
+    padding: 8px 12px;
+    border-radius: 12px;
+    gap: 8px;
+    background: rgba(7, 9, 14, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
     animation: none;
+    z-index: 4;
+  }
+
+  .hud-top-right {
+    top: 12px;
+    right: 12px;
+    left: auto;
+    bottom: auto;
+    margin-top: 0;
+    width: auto;
+  }
+
+  .hud-bottom-left {
+    bottom: 12px;
+    left: 12px;
+    right: auto;
+    top: auto;
+    margin-top: 0;
+    width: auto;
+  }
+
+  .hud-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+  }
+
+  .hud-title {
+    font-size: 0.62rem;
+  }
+
+  .hud-value {
+    font-size: 0.85rem;
+  }
+
+  /* Trust Strip Metrics Section Mobile 2x3 Grid */
+  .trust-strip-section {
+    padding: 24px 0 44px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 16px 10px;
+    border-radius: 14px;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
   }
 
   .form-grid-2,
@@ -2813,6 +2910,55 @@ select.form-control option {
   .hero-cta-group a.btn {
     font-size: 0.84rem;
     padding: 12px 10px;
+  }
+
+  .floating-hud-badge {
+    padding: 6px 10px;
+    gap: 6px;
+    border-radius: 10px;
+  }
+
+  .hud-top-right {
+    top: 10px;
+    right: 10px;
+  }
+
+  .hud-bottom-left {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .hud-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0.82rem;
+    border-radius: 6px;
+  }
+
+  .hud-title {
+    font-size: 0.58rem;
+  }
+
+  .hud-value {
+    font-size: 0.8rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 14px 8px;
+    border-radius: 14px;
+  }
+
+  .stat-number {
+    font-size: 1.55rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
   }
 
   .calculator-card {
