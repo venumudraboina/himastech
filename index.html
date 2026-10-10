@@ -858,19 +858,19 @@
             <div class="form-group" style="margin-bottom: 20px;">
               <label for="calcProjectType">Select Project Category</label>
               <select class="form-control" id="calcProjectType">
-                <option value="sky-villas">Ultra-Luxury Sky Villas (₹4 Cr - ₹15 Cr)</option>
-                <option value="luxury-apartments">Luxury Gated High-Rise Apartments (₹1.2 Cr - ₹3.5 Cr)</option>
-                <option value="commercial">Grade-A Commercial & Retail (₹2.5 Cr - ₹20 Cr)</option>
-                <option value="open-plots">HMDA / RERA Approved Premium Plots (₹40L - ₹1.5 Cr)</option>
+                <option value="sky-villas">Ultra-Luxury Sky Villas (₹4 Cr – ₹15 Cr)</option>
+                <option value="luxury-apartments">Luxury High-Rise (₹1.2 Cr – ₹3.5 Cr)</option>
+                <option value="commercial">Grade-A Commercial (₹2.5 Cr – ₹20 Cr)</option>
+                <option value="open-plots">HMDA / RERA Plots (₹40L – ₹1.5 Cr)</option>
               </select>
             </div>
 
             <div class="form-group" style="margin-bottom: 24px;">
               <label for="calcLocation">Target Market</label>
               <select class="form-control" id="calcLocation">
-                <option value="hyderabad-west">Hyderabad West (Kokapet, Financial Dist, Gachibowli, Jubilee Hills)</option>
-                <option value="hyderabad-growth">Hyderabad Growth Corridors (Tellapur, Mokila, Neopolis)</option>
-                <option value="nri-global">Global NRI Campaign (USA, UAE, Singapore, UK)</option>
+                <option value="hyderabad-west">Hyderabad West (Kokapet, Financial Dist)</option>
+                <option value="hyderabad-growth">Growth Corridors (Tellapur, Neopolis)</option>
+                <option value="nri-global">Global NRI (USA, UAE, UK, Singapore)</option>
                 <option value="pan-india">Pan-India Investor Network</option>
               </select>
             </div>
@@ -887,10 +887,6 @@
                 <span>₹15,00,000</span>
               </div>
             </div>
-
-            <button class="btn btn-gold trigger-consultation-modal" style="width: 100%; margin-top: 10px;">
-              <i class="ri-check-double-line"></i> LOCK IN THIS CAMPAIGN PLAN
-            </button>
           </div>
 
           <!-- Output Screen -->
@@ -924,10 +920,14 @@
               <span class="result-metric-val highlight-gold" id="metricBookings">4 Bookings</span>
             </div>
 
-            <div class="result-row" style="background: rgba(245, 166, 35, 0.08); padding: 14px 10px; border-radius: 8px; margin-top: 10px;">
+            <div class="result-row revenue-velocity-row" style="background: rgba(245, 166, 35, 0.08); padding: 14px 10px; border-radius: 8px; margin-top: 10px;">
               <span class="result-metric-title" style="color: #fff; font-weight: 700;">Est. Inventory Revenue Velocity:</span>
               <span class="result-metric-val highlight-gold" id="metricRevenue">₹22.0 Cr+</span>
             </div>
+
+            <button class="btn btn-gold trigger-consultation-modal" id="calcLockPlanBtn" style="width: 100%; margin-top: 18px;">
+              <i class="ri-check-double-line"></i> LOCK IN THIS CAMPAIGN PLAN
+            </button>
           </div>
         </div>
       </div>
