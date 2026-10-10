@@ -1699,7 +1699,7 @@ select.form-control option {
 
 .portfolio-thumb-box img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   transition: var(--transition-smooth);
 }
@@ -1709,17 +1709,17 @@ select.form-control option {
 }
 
 .portfolio-category-tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: rgba(7, 9, 14, 0.85);
-  backdrop-filter: blur(10px);
+  display: inline-block;
+  background: rgba(245, 166, 35, 0.12);
   border: 1px solid var(--border-gold);
   color: var(--gold-300);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 4px 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 4px 10px;
   border-radius: 9999px;
+  margin-bottom: 10px;
 }
 
 .portfolio-info {
@@ -3319,6 +3319,68 @@ select.form-control option {
     font-size: 0.88rem;
     margin-top: 4px;
   }
+
+  /* Filter Tabs Mobile Swipeable Rail */
+  .filter-tabs-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scroll-padding: 12px;
+    scrollbar-width: none;
+    gap: 8px;
+    padding: 6px 4px 14px 4px;
+    margin-bottom: 24px;
+  }
+
+  .filter-tabs-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-tab-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 9px 16px;
+    font-size: 0.8rem;
+    border-radius: 9999px;
+    scroll-snap-align: start;
+  }
+
+  /* Portfolio Case Studies Mobile */
+  .portfolio-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .portfolio-card {
+    border-radius: 18px;
+  }
+
+  .portfolio-info {
+    padding: 18px 16px;
+  }
+
+  .portfolio-title {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+  }
+
+  .portfolio-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  .portfolio-metrics-pill-row {
+    gap: 8px;
+  }
+
+  .metric-pill {
+    font-size: 0.74rem;
+    padding: 4px 9px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3736,5 +3798,42 @@ select.form-control option {
   .modal-submit-btn {
     padding: 11px 14px;
     font-size: 0.82rem;
+  }
+
+  /* Filter Tabs Small Mobile */
+  .filter-tab-btn {
+    padding: 7px 13px;
+    font-size: 0.75rem;
+  }
+
+  /* Portfolio Cards Small Mobile */
+  .portfolio-card {
+    border-radius: 16px;
+  }
+
+  .portfolio-info {
+    padding: 14px 12px;
+  }
+
+  .portfolio-title {
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+  }
+
+  .portfolio-desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .portfolio-category-tag {
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    margin-bottom: 8px;
+  }
+
+  .metric-pill {
+    font-size: 0.68rem;
+    padding: 3px 7px;
   }
 }

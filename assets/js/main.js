@@ -434,6 +434,10 @@ function initFilterTabs() {
       serviceTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
+      if (typeof tab.scrollIntoView === 'function') {
+        tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
+
       const filter = tab.getAttribute('data-filter');
       serviceCards.forEach(card => {
         if (filter === 'all' || card.getAttribute('data-category') === filter) {
@@ -453,6 +457,10 @@ function initFilterTabs() {
     tab.addEventListener('click', () => {
       portTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
+
+      if (typeof tab.scrollIntoView === 'function') {
+        tab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      }
 
       const filter = tab.getAttribute('data-filter');
       portCards.forEach(card => {
