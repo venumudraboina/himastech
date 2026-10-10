@@ -252,7 +252,7 @@ function initAiSimulator() {
 
       aiOutputLog.innerHTML = `
         <div class="ai-generated-card">
-          <p style="color: #f5a623; font-weight: 700; margin-bottom: 8px;">
+          <p style="color: #38bdf8; font-weight: 700; margin-bottom: 8px;">
             <i class="ri-sparkling-fill"></i> AI-Optimized Campaign Blueprint for: ${propText} (${locText})
           </p>
           <div style="margin-bottom: 10px;">
@@ -410,7 +410,7 @@ function initFunnelTabs() {
       if (leftCol && data) {
         leftCol.innerHTML = `
           <div class="section-tag">${data.step} // ${data.title}</div>
-          <h3 class="text-gold-gradient funnel-detail-title">${data.heading}</h3>
+          <h3 class="text-blue-gradient funnel-detail-title">${data.heading}</h3>
           <p class="section-subtitle funnel-desc">${data.desc}</p>
           <ul class="funnel-checklist">
             ${data.points.map(pt => `<li><i class="ri-checkbox-circle-fill"></i> <span>${pt}</span></li>`).join('')}
@@ -623,7 +623,7 @@ function showToast(message) {
     document.body.appendChild(toast);
   }
 
-  toast.innerHTML = `<i class="ri-checkbox-circle-fill" style="color: #f5a623; font-size: 1.2rem;"></i> <span>${message}</span>`;
+  toast.innerHTML = `<i class="ri-checkbox-circle-fill" style="color: #38bdf8; font-size: 1.2rem;"></i> <span>${message}</span>`;
   toast.classList.add('show');
 
   setTimeout(() => {
